@@ -5,9 +5,7 @@ class UserController extends Controller {
  public function index() {
     $user = $this->model('User');
     $data = $user->userGet();
-    pr($data);
-  }
- 
-}
 
-?>
+    return $this->view('user', ['users' => $data]);
+  }
+}

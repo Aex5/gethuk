@@ -1,16 +1,13 @@
 <?php if (!defined('GETHUK')) die ('gak boleh bang!');
 $requestUri = $_SERVER['REQUEST_URI']; 
 
-// Memecah URI berdasarkan '/' untuk mendapatkan bagian-bagian breadcrumb
 $segments = explode('/', trim($requestUri, '/'));
 
-// Menyiapkan bagian-bagian breadcrumb
 $breadcrumbs = [
     ['label' => 'Home', 'url' => '/']
 ];
 
-
-$uri = ''; // Membuat URL dasar untuk setiap breadcrumb
+$uri = '';
 foreach ($segments as $segment) {
     $uri .= '/' . $segment;
     $breadcrumbs[] = ['label' => ucfirst($segment), 'url' => $uri];

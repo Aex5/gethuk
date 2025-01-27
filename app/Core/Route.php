@@ -3,8 +3,8 @@
 class Route
 {
   protected $controller = 'homeController';
-  protected $method = 'index';
-  protected $params = [];
+  protected $method     = 'index';
+  protected $params     = [];
 
   public function __construct()
   {

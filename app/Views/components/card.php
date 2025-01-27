@@ -1,8 +1,13 @@
-<div class="card mb-3" style="width: 100%;">
-  <!-- <img src="..." class="card-img-top" alt="..."> -->
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
+<?php
+function render_card($card_title, $card_text, $btn_text, $btn_url = "#") {
+    echo '
+    <div class="card mb-3" style="width: 100%;">
+        <div class="card-body">
+            <h5 class="card-title">' . htmlspecialchars($card_title) . '</h5>
+            <p class="card-text">' . htmlspecialchars($card_text) . '</p>
+            <a href="' . htmlspecialchars($btn_url) . '" class="btn btn-primary">' . htmlspecialchars($btn_text) . '</a>
+        </div>
+    </div>';
+}
+?>
+

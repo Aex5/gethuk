@@ -4,7 +4,7 @@ class User {
   private $_db;
 
   public function __construct() {
-    $this->_db = Database::getInstance();
+    $this->_db = new Form_Builder();
   }  
 
   public function userGet() {
